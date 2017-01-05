@@ -24,16 +24,10 @@ class Language
      */
     public static function loadFile($path)
     {
-        $lines = explode("\n", str_replace(["\r\n", "\r"], "\n", file_get_contents($path)));
-        foreach ($lines as $line)
-        {
-            $line = trim($line);
-            if ($line != '' && $line[0] != '#')
-            {
-                $parts=explode('=',$line,2);
-                if (isset($parts[1]))
-                    self::$values[$parts[0]]=$parts[1];
-            }
+        for($tok = strtok(file_get_contents($path), "\r\n"); $tok !== false; $tok = strtok("\r\n")) {
+            $parts=explode('=', $tok, 2);
+            if (isset($parts[1]))
+                self::$values[$parts[0]] = str_replace('\n', PHP_EOL, $parts[1]);
         }
     }
     
