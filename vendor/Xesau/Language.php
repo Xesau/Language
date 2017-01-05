@@ -25,6 +25,8 @@ class Language
     public static function loadFile($path)
     {
         for($tok = strtok(file_get_contents($path), "\r\n"); $tok !== false; $tok = strtok("\r\n")) {
+            if ($tok[0] == '#')
+                continue;
             $parts=explode('=', $tok, 2);
             if (isset($parts[1]))
                 self::$values[$parts[0]] = str_replace('\n', PHP_EOL, $parts[1]);
