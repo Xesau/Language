@@ -1,11 +1,11 @@
 user.registered=%1 registered %2
 
 datetime.syntax.full=%n %d %m %y at %h:%t:%s %A
-datetime.syntax.without_time=%n %d %m %y
-datetime.syntax.without_names_or_time=%d %m %y
-datetime.syntax.without_seconds=%n %d %m %y at %h:%t %A
-datetime.syntax.without_names=%d %m %y at %h:%t:%s %A
-datetime.syntax.without_names_or_seconds=%d %m %y at %h:%t %A
+datetime.syntax.-time=%n %d %m %y
+datetime.syntax.-names,time=%d %m %y
+datetime.syntax.-seconds=%n %d %m %y at %h:%t %A
+datetime.syntax.-names=%d %m %y at %h:%t:%s %A
+datetime.syntax.-names,seconds=%d %m %y at %h:%t %A
 
 datetime.am=AM
 datetime.pm=PM
