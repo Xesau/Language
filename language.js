@@ -1,5 +1,5 @@
 /**
- * This library requires jQuery (https://jquery.org/)
+ * This library requires jQuery (https://jquery.com/)
  */
 var language = {
 
