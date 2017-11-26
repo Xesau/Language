@@ -1,3 +1,6 @@
+/**
+ * This library requires jQuery (https://jquery.org/)
+ */
 var language = {
 
     strings: {},
